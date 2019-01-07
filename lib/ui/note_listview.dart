@@ -53,7 +53,7 @@ class _MyListViewState extends State<MyListView> {
               itemBuilder: (context, index) {
                 return Column(
                   children: <Widget>[
-                    Divider(height: 5.0,),
+                    Divider(height: 10.0, color: Colors.red,),
                     ListTile(
                       title: Text("${_list[index].title}", style: TextStyle(fontSize: 24.0, color: Colors.deepOrangeAccent),),
                       subtitle: Text("${_list[index].description}", style: TextStyle(fontSize: 18.0, fontStyle: FontStyle.italic),),
@@ -84,6 +84,7 @@ class _MyListViewState extends State<MyListView> {
         ),
         floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
+            tooltip: "Add note",
             onPressed: () {
               _addNote(context);
             }
